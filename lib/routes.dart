@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mygoodhouse/index.dart';
 import 'package:mygoodhouse/login.dart';
 import 'package:mygoodhouse/not_found_page.dart';
+import 'package:mygoodhouse/register.dart';
 
 class Routes {
   //定义路由名称
@@ -23,6 +24,11 @@ class Routes {
     return const Login();
   });
 
+  static final Handler _registerHandler = Handler(
+      handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+    return const Register();
+  });
+
   static final Handler _roomDetailHandler = Handler(
       handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
     return const Login();
@@ -37,6 +43,7 @@ class Routes {
   static void configureRoutes(FluroRouter router) {
     router.define(home, handler: _homeHandler);
     router.define(login, handler: _loginHandler);
+    router.define(register, handler: _registerHandler);
     router.define(roomDetail, handler: _roomDetailHandler);
     router.notFoundHandler = _notFoundHandler;
   }
