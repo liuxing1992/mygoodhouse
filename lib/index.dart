@@ -19,17 +19,24 @@ class Index extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: () {
-
-             Application.router.navigateTo(context, Routes.login ,
-                 transition : TransitionType.fadeIn );
-
-            }, child: const Text('点击登录')),
-            ElevatedButton(onPressed: () {}, child: const Text('点击登录')),
             ElevatedButton(
                 onPressed: () {
-                  Application.router.navigateTo(context, "path" , transition:
-                  TransitionType.fadeIn);
+                  print('click');
+                  Application.router.navigateTo(context, Routes.login,
+                      transition: TransitionType.fadeIn);
+                },
+                onLongPress: (){
+                  print('long click');
+                },
+                child: const Text('点击登录')),
+            ElevatedButton(onPressed: () {
+              Application.router.navigateTo(context, Routes.register,
+                  transition: TransitionType.none);
+            }, child: const Text('点击注册')),
+            ElevatedButton(
+                onPressed: () {
+                  Application.router.navigateTo(context, "path",
+                      transition: TransitionType.fadeIn);
                 },
                 child: const Text('点击找不到')),
           ],

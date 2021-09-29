@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mygoodhouse/index.dart';
 import 'package:mygoodhouse/login.dart';
 import 'package:mygoodhouse/not_found_page.dart';
+import 'package:mygoodhouse/pages/home/home_page.dart';
 import 'package:mygoodhouse/register.dart';
 
 class Routes {
@@ -16,7 +17,7 @@ class Routes {
 
   static final Handler _homeHandler = Handler(
       handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
-    return const Index();
+    return  HomePage();
   });
 
   static final Handler _loginHandler = Handler(
