@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mygoodhouse/pages/home/tab_index/index_recommend.dart';
 import 'package:mygoodhouse/pages/home/tab_index/tab_navigator.dart';
+import 'package:mygoodhouse/pages/home/tab_info/info_list.dart';
 import 'package:mygoodhouse/widgets/common_swiper.dart';
 
 class TabHome extends StatefulWidget {
@@ -17,7 +19,9 @@ class _TabHomeState extends State<TabHome> {
       body: ListView(
         children: [
           CommonSwiper(),
-          IndexNavigator()
+          IndexNavigator(),
+          IndexRecommend(),
+          InfoListWidget(visible: true)
         ],
       ),
     );

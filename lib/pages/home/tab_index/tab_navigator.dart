@@ -11,6 +11,7 @@ class IndexNavigator extends StatelessWidget {
       children: indexNavigatorItemList
           .map((item) => Container(
                 color: Colors.white,
+                padding: EdgeInsets.only(top: 10 , bottom: 10),
                 child: InkWell(
                   onTap: () {
                     item.onTap!(context);
@@ -21,7 +22,13 @@ class IndexNavigator extends StatelessWidget {
                         item.imageUrl,
                         width: 47.5,
                       ),
-                      Text(item.title),
+                      Text(
+                        item.title,
+                        style: TextStyle(
+                            fontSize: 14.0,
+                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ],
                   ),
                 ),
